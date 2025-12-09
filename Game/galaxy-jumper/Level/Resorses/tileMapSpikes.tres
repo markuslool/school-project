@@ -1,0 +1,14 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://chujx87dp0vla"]
+
+[ext_resource type="Texture2D" uid="uid://clwt5rp5cetj5" path="res://Level/spriteLists/Spikes.png" id="1_k664a"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5qvf"]
+texture = ExtResource("1_k664a")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -0.31863022, -16, 16, 16)
+
+[resource]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_h5qvf")
