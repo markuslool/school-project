@@ -7,7 +7,7 @@
     --muted: #6c757d;
     --border: #e5e7eb;
     --radius: 12px;
-    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     padding: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -38,7 +38,7 @@ header h1 {
 nav {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 nav ul {
@@ -56,7 +56,9 @@ nav a {
     text-decoration: none;
     padding: 8px 16px;
     border-radius: var(--radius);
-    transition: background 0.2s, color 0.2s;
+    transition:
+        background 0.2s,
+        color 0.2s;
 }
 
 nav a:hover {
@@ -93,6 +95,20 @@ footer {
     border-top: 1px solid var(--border);
     border-radius: var(--radius) var(--radius) 0 0;
     font-size: 1rem;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center; /* Центрируем игру */
+    margin: 20px 0;
+    background: #000; /* Черный фон, если пропорции не сойдутся */
+    border-radius: 8px; /* Скругленные углы */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для красоты */
+}
+
+iframe {
+    display: block; /* Убирает лишние отступы снизу */
 }
 
 @media (max-width: 600px) {

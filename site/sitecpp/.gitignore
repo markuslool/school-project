@@ -3,3 +3,6 @@ crow_all.h
 build/
 *.exe
 obj/
+makefile
+my_app.make
+bin/
