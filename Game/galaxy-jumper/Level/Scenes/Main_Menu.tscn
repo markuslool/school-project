@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://cttvafi064bjn"]
+[gd_scene load_steps=6 format=4 uid="uid://ddsdwjtdxq0ac"]
 
-[ext_resource type="Script" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
+[ext_resource type="Script" uid="uid://d226tm4u4o0wg" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
 [ext_resource type="TileSet" uid="uid://3xq0apfj6sbq" path="res://Level/Resorses/tileMapMainMenu.tres" id="1_1uq15"]
 [ext_resource type="Script" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
 
@@ -42,6 +42,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -10.0
+offset_right = 28.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 
