@@ -1,0 +1,5 @@
+asio/
+crow_all.h
+build/
+*.exe
+obj/
