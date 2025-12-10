@@ -4,6 +4,7 @@ extends Control
 @export var level2_path: String = "res://Level/Scenes/Level_02.tscn"
 @export var level3_path: String = "res://Level/Scenes/Level_03.tscn"
 @export var github_url: String = "https://github.com/your-repo"
+@export var credits_url: String = "https://exmaple.com"
 
 func _ready() -> void:
 	# Ищем контейнер с кнопками (исправлено на find_child для Godot 4)
@@ -22,6 +23,10 @@ func _ready() -> void:
 	_connect_button(menu_vbox, "TestButton2", "_on_testbutton2_pressed")
 	_connect_button(menu_vbox, "TestButton3", "_on_testbutton3_pressed")
 	_connect_button(menu_vbox, "TextureButton", "_on_github_pressed")
+	
+	# Новые кнопки
+	_connect_button(menu_vbox, "SettingsButton", "_on_settings_pressed")
+	_connect_button(menu_vbox, "CreditsButton", "_on_credits_pressed")
 
 func _connect_button(parent: Node, btn_name: String, method_name: String) -> void:
 	var btn = parent.find_child(btn_name, true, false)
@@ -46,3 +51,12 @@ func _on_testbutton3_pressed() -> void:
 func _on_github_pressed() -> void:
 	if github_url != "":
 		OS.shell_open(github_url)
+
+func _on_settings_pressed() -> void:
+	var dialog = find_child("SettingsDialog", true, false)
+	if dialog:
+		dialog.popup_centered()
+
+func _on_credits_pressed() -> void:
+	if credits_url != "":
+		OS.shell_open(credits_url)

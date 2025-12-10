@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddsdwjtdxq0ac"]
+[gd_scene load_steps=6 format=3 uid="uid://ddsdwjtdxq0ac"]
 
 [ext_resource type="Script" uid="uid://d226tm4u4o0wg" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
 [ext_resource type="Script" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
+[ext_resource type="Texture2D" uid="uid://3wb35ly2353h" path="res://Level/spriteLists/1200-1581188533.webp" id="2_1nua6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i5fg"]
 line_spacing = -8.0
@@ -16,31 +17,45 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 11.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1nua6")
 
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(691, -140)
+motion_mirroring = Vector2(1152, 648)
+
+[node name="BackgroundTexture" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = -689.0
+offset_top = 150.0
+offset_right = 463.0
+offset_bottom = 798.0
 stretch_mode = 1
 
-[node name="AnimationScript" type="Node" parent="Background"]
-script = SubResource("GDScript_bg_anim")
-
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(956, 527)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="12001581188533" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(-3851, 2701.0002)
+scale = Vector2(-27.596424, 14.963606)
+texture = ExtResource("2_1nua6")
 
 [node name="Buttons" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 7.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(639, 383)
@@ -90,3 +105,19 @@ text = "Level 2"
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Level 3"
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Settings"
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Credits"
+
+[node name="SettingsDialog" type="AcceptDialog" parent="CanvasLayer"]
+title = "Settings"
+initial_position = 2
+size = Vector2i(200, 100)
+dialog_text = "Beta Test иди нахуй"
