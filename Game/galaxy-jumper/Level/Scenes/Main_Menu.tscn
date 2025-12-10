@@ -91,20 +91,10 @@ label_settings = SubResource("LabelSettings_1uq15")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TestButton1" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
+[node name="PlayButton" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
-text = "Level 1"
-
-[node name="TestButton2" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
-custom_minimum_size = Vector2(250, 60)
-layout_mode = 2
-text = "Level 2"
-
-[node name="TestButton3" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
-custom_minimum_size = Vector2(250, 60)
-layout_mode = 2
-text = "Level 3"
+text = "Play"
 
 [node name="SettingsButton" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
 custom_minimum_size = Vector2(250, 60)
@@ -115,6 +105,39 @@ text = "Settings"
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Credits"
+
+[node name="LevelSelectVBox" type="VBoxContainer" parent="CanvasLayer/Buttons"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Buttons/LevelSelectVBox"]
+layout_mode = 2
+text = "Select Level"
+label_settings = SubResource("LabelSettings_1i5fg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TestButton1" type="Button" parent="CanvasLayer/Buttons/LevelSelectVBox"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Level 1"
+
+[node name="TestButton2" type="Button" parent="CanvasLayer/Buttons/LevelSelectVBox"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Level 2"
+
+[node name="TestButton3" type="Button" parent="CanvasLayer/Buttons/LevelSelectVBox"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Level 3"
+
+[node name="BackButton" type="Button" parent="CanvasLayer/Buttons/LevelSelectVBox"]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+text = "Back"
 
 [node name="SettingsDialog" type="AcceptDialog" parent="CanvasLayer"]
 title = "Settings"
