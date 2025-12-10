@@ -1,24 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://c65h3on8d3uw"]
+[gd_scene load_steps=6 format=4 uid="uid://c65h3on8d3uw"]
 
-[ext_resource type="PackedScene" uid="uid://ca5plqlu0mwj1" path="res://preFabs/static_body_2d.tscn" id="1_epypp"]
-[ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Resorses/new_rectangle_shape_2d.tres" id="2_0hol4"]
-[ext_resource type="Script" uid="uid://csp22yx0y1w6v" path="res://Sripts/playerController.gd" id="2_q6r6c"]
-[ext_resource type="Texture2D" uid="uid://5u05f64uuq8o" path="res://Resorses/player.png" id="3_q6r6c"]
+[ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMapGround.tres" id="1_0hol4"]
+[ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Level/Resorses/new_rectangle_shape_2d.tres" id="2_0hol4"]
+[ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMapSpikes.tres" id="2_kdubu"]
+[ext_resource type="Script" uid="uid://csp22yx0y1w6v" path="res://Level/Sripts/playerController.gd" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://5u05f64uuq8o" path="res://Level/spriteLists/player.png" id="3_q6r6c"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Level" type="Node" parent="."]
 
-[node name="StaticBody2D" parent="Level" instance=ExtResource("1_epypp")]
+[node name="Ground" type="TileMapLayer" parent="Level"]
+tile_map_data = PackedByteArray("AAD9/wAAAQAAAAAAAAACAAAAAQAAAAAAAAABAAAAAQAAAAEAAAD+/wAAAQAAAAEAAAD//wEAAQAAAAAAAAD//wAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAQAAAAAAAAA=")
+tile_set = ExtResource("1_0hol4")
 
-[node name="StaticBody2D2" parent="Level" instance=ExtResource("1_epypp")]
-position = Vector2(-32, 0)
-
-[node name="StaticBody2D3" parent="Level" instance=ExtResource("1_epypp")]
-position = Vector2(-64, 0)
-
-[node name="StaticBody2D4" parent="Level" instance=ExtResource("1_epypp")]
-position = Vector2(32, 0)
+[node name="Spikes" type="TileMapLayer" parent="Level"]
+tile_map_data = PackedByteArray("AAACAP//AQAAAAAAAAD9////AQAAAAAAAAA=")
+tile_set = ExtResource("2_kdubu")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(0, -48)
@@ -30,10 +28,5 @@ zoom = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = ExtResource("2_0hol4")
 
-[node name="TextureRect" type="TextureRect" parent="Player"]
-offset_left = -16.0
-offset_top = -16.0
-offset_right = 16.0
-offset_bottom = 16.0
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("3_q6r6c")
-stretch_mode = 1
