@@ -37,23 +37,21 @@ position = Vector2(576, 324)
 tile_map_data = PackedByteArray("AAAOAAcAAAAAAAEAAAAOAAgAAAAAAAEAAAAOAAkAAAAAAAEAAAAOAAoAAAAAAAEAAAAOAAsAAAAAAAEAAAAOAA0AAAAAAAEAAAAOAAwAAAAAAAEAAAAOAA4AAAAAAAEAAAAOAA8AAAAAAAIAAAAPAA8AAAABAAIAAAAQAA8AAAABAAIAAAARAA8AAAABAAIAAAASAA8AAAABAAIAAAATAA8AAAABAAIAAAAUAA8AAAABAAIAAAAVAA8AAAABAAIAAAAXAA8AAAACAAIAAAAWAA8AAAABAAIAAAAXAA4AAAACAAEAAAAXAA0AAAACAAEAAAAXAAwAAAACAAEAAAAXAAsAAAACAAEAAAAXAAoAAAACAAEAAAAXAAkAAAACAAEAAAAXAAgAAAACAAEAAAAXAAcAAAACAAEAAAAXAAYAAAACAAEAAAAXAAUAAAACAAEAAAAXAAQAAAACAAAAAAAWAAQAAAABAAAAAAAVAAQAAAABAAAAAAAUAAQAAAABAAAAAAATAAQAAAABAAAAAAASAAQAAAABAAAAAAARAAQAAAABAAAAAAAQAAQAAAABAAAAAAAPAAQAAAABAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAEAAAAOAAYAAAAAAAEAAAAPAAYAAAACAAEAAAAPAAcAAAACAAEAAAAPAAgAAAACAAEAAAAPAAkAAAACAAEAAAAPAAoAAAACAAEAAAAPAAsAAAACAAEAAAAPAAwAAAACAAEAAAAPAA0AAAACAAEAAAAQAA4AAAABAAAAAAARAA4AAAABAAAAAAASAA4AAAABAAAAAAATAA4AAAABAAAAAAAUAA4AAAABAAAAAAAVAA4AAAABAAAAAAAQAAUAAAABAAIAAAARAAUAAAABAAIAAAASAAUAAAABAAIAAAATAAUAAAABAAIAAAAUAAUAAAABAAIAAAAVAAUAAAABAAIAAAAWAA0AAAAAAAEAAAAWAAwAAAAAAAEAAAAWAAsAAAAAAAEAAAAWAAoAAAAAAAEAAAAWAAkAAAAAAAEAAAAWAAgAAAAAAAEAAAAWAAcAAAAAAAEAAAAWAAYAAAAAAAEAAAAWAAUAAAADAAEAAAAPAAUAAAAEAAEAAAAPAA4AAAAEAAAAAAAWAA4AAAADAAAAAAAVAA0AAAADAAIAAAAUAA0AAAADAAIAAAATAA0AAAADAAIAAAASAA0AAAADAAIAAAARAA0AAAADAAIAAAAQAA0AAAADAAIAAAAQAAwAAAADAAIAAAARAAwAAAADAAIAAAASAAwAAAADAAIAAAATAAwAAAADAAIAAAAUAAwAAAADAAIAAAAVAAwAAAADAAIAAAAVAAsAAAADAAIAAAAUAAsAAAADAAIAAAATAAsAAAADAAIAAAASAAsAAAADAAIAAAARAAsAAAADAAIAAAAQAAsAAAADAAIAAAAQAAoAAAADAAIAAAAQAAkAAAADAAIAAAARAAkAAAADAAIAAAASAAoAAAADAAIAAAATAAoAAAADAAIAAAAUAAoAAAADAAIAAAAVAAoAAAADAAIAAAAVAAkAAAADAAIAAAAUAAgAAAADAAIAAAATAAgAAAADAAIAAAATAAkAAAADAAIAAAASAAkAAAADAAIAAAAUAAkAAAADAAIAAAAVAAgAAAADAAIAAAAVAAcAAAADAAIAAAAVAAYAAAADAAIAAAAUAAYAAAADAAIAAAATAAYAAAADAAIAAAASAAYAAAADAAIAAAARAAYAAAADAAIAAAAQAAYAAAADAAIAAAAQAAcAAAADAAIAAAAQAAgAAAADAAIAAAARAAgAAAADAAIAAAASAAgAAAADAAIAAAATAAcAAAADAAIAAAAUAAcAAAADAAIAAAASAAcAAAADAAIAAAARAAcAAAADAAIAAAARAAoAAAADAAIAAAA=")
 tile_set = ExtResource("1_1uq15")
 
-[node name="Buttons" type="CenterContainer" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Buttons" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 28.0
-offset_top = -10.0
-offset_right = 28.0
-offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MenuVBox" type="VBoxContainer" parent="Buttons"]
+[node name="MenuVBox" type="VBoxContainer" parent="CanvasLayer/Buttons"]
 layout_mode = 2
+theme_override_constants/separation = 20
 alignment = 1
 
-[node name="GameName" type="Label" parent="Buttons/MenuVBox"]
+[node name="GameName" type="Label" parent="CanvasLayer/Buttons/MenuVBox"]
 layout_mode = 2
 text = "Galaxy
 Jumper"
@@ -61,27 +59,36 @@ label_settings = SubResource("LabelSettings_1i5fg")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="Buttons/MenuVBox"]
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Buttons/MenuVBox"]
+custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 stretch_mode = 0
 script = ExtResource("2_1i5fg")
 
-[node name="Label" type="Label" parent="Buttons/MenuVBox/TextureButton"]
-layout_mode = 0
+[node name="Label" type="Label" parent="CanvasLayer/Buttons/MenuVBox/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Git
 Hub"
 label_settings = SubResource("LabelSettings_1uq15")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TestButton1" type="Button" parent="Buttons/MenuVBox"]
+[node name="TestButton1" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
+custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Level 1"
 
-[node name="TestButton2" type="Button" parent="Buttons/MenuVBox"]
+[node name="TestButton2" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
+custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Level 2"
 
-[node name="TestButton3" type="Button" parent="Buttons/MenuVBox"]
+[node name="TestButton3" type="Button" parent="CanvasLayer/Buttons/MenuVBox"]
+custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
 text = "Level 3"
