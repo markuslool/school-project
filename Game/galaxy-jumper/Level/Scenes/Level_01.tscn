@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c65h3on8d3uw"]
+[gd_scene load_steps=10 format=4 uid="uid://bbpo1ayncx1p7"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMapGround.tres" id="1_llr5h"]
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMapSpikes.tres" id="2_gydcd"]
