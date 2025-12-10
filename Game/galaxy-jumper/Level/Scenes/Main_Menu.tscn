@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://cttvafi064bjn"]
+[gd_scene load_steps=6 format=4 uid="uid://cttvafi064bjn"]
 
+[ext_resource type="Script" uid="uid://qcjve3g3o7dk" path="res://Level/Sripts/levelSwitcher.gd" id="1_1nua6"]
 [ext_resource type="TileSet" uid="uid://c1snkqnr0t35u" path="res://Level/Resorses/tileMapMainMenu.tres" id="1_1uq15"]
 [ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
 
@@ -18,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1nua6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
@@ -55,3 +57,20 @@ text = "Git
 Hub"
 label_settings = SubResource("LabelSettings_1uq15")
 vertical_alignment = 1
+
+[node name="TestButton1" type="Button" parent="Buttons"]
+offset_right = 64.0
+offset_bottom = 16.0
+text = "Level 1"
+
+[node name="TestButton2" type="Button" parent="Buttons"]
+offset_top = 31.0
+offset_right = 64.0
+offset_bottom = 62.0
+text = "Level 2"
+
+[node name="TestButton3" type="Button" parent="Buttons"]
+offset_top = 62.0
+offset_right = 64.0
+offset_bottom = 93.0
+text = "Level 3"
