@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://da7m5q2sokw31"]
+[gd_scene load_steps=5 format=3 uid="uid://ddsdwjtdxq0ac"]
 
-[ext_resource type="Script" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
-[ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
+[ext_resource type="Script" uid="uid://d226tm4u4o0wg" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
+[ext_resource type="Script" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i5fg"]
 line_spacing = -8.0
@@ -20,14 +20,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1nua6")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.05, 0.06, 0.12, 1)
+stretch_mode = 1
+
+[node name="AnimationScript" type="Node" parent="Background"]
+script = SubResource("GDScript_bg_anim")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
@@ -40,6 +43,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(639, 383)
 
 [node name="MenuVBox" type="VBoxContainer" parent="CanvasLayer/Buttons"]
 layout_mode = 2
@@ -48,8 +52,7 @@ alignment = 1
 
 [node name="GameName" type="Label" parent="CanvasLayer/Buttons/MenuVBox"]
 layout_mode = 2
-text = "Galaxy
-Jumper"
+text = "Galaxy Jumper"
 label_settings = SubResource("LabelSettings_1i5fg")
 horizontal_alignment = 1
 vertical_alignment = 1
