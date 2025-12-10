@@ -1,12 +1,26 @@
 [gd_scene load_steps=5 format=4 uid="uid://cttvafi064bjn"]
 
 [ext_resource type="TileSet" uid="uid://c1snkqnr0t35u" path="res://Level/Resorses/tileMapMainMenu.tres" id="1_1uq15"]
-[ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i5fg"]
 line_spacing = -10.0
 font_size = 32
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_1uq15"]
+script/source = "extends TextureButton
+
+# Ссылка, на которую будет переход
+@export var url: String = \"https://example.com\"
+
+func _ready():
+	# Подключаем сигнал с использованием Callable
+	pressed.connect(_on_button_pressed)
+
+func _on_button_pressed():
+	# Открыть ссылку в браузере
+	OS.shell_open(url)
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_1uq15"]
 line_spacing = -10.0
@@ -45,7 +59,7 @@ offset_top = 406.0
 offset_right = 555.0
 offset_bottom = 446.0
 stretch_mode = 0
-script = ExtResource("2_1i5fg")
+script = SubResource("GDScript_1uq15")
 
 [node name="Label" type="Label" parent="Buttons/TextureButton"]
 layout_mode = 0
