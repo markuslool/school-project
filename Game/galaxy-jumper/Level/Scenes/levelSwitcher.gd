@@ -18,15 +18,22 @@ func _ready() -> void:
 		push_error("levelSwitcher.gd: 'MenuVBox' node not found")
 		return
 
-	# Подключаем кнопки
-	_connect_button(menu_vbox, "TestButton1", "_on_testbutton1_pressed")
-	_connect_button(menu_vbox, "TestButton2", "_on_testbutton2_pressed")
-	_connect_button(menu_vbox, "TestButton3", "_on_testbutton3_pressed")
+	var level_select_vbox = buttons.find_child("LevelSelectVBox", true, false)
+	if level_select_vbox == null:
+		push_error("levelSwitcher.gd: 'LevelSelectVBox' node not found")
+		return
+
+	# Подключаем кнопки главного меню
+	_connect_button(menu_vbox, "PlayButton", "_on_play_pressed")
 	_connect_button(menu_vbox, "TextureButton", "_on_github_pressed")
-	
-	# Новые кнопки
 	_connect_button(menu_vbox, "SettingsButton", "_on_settings_pressed")
 	_connect_button(menu_vbox, "CreditsButton", "_on_credits_pressed")
+
+	# Подключаем кнопки выбора уровня
+	_connect_button(level_select_vbox, "TestButton1", "_on_testbutton1_pressed")
+	_connect_button(level_select_vbox, "TestButton2", "_on_testbutton2_pressed")
+	_connect_button(level_select_vbox, "TestButton3", "_on_testbutton3_pressed")
+	_connect_button(level_select_vbox, "BackButton", "_on_back_pressed")
 
 func _connect_button(parent: Node, btn_name: String, method_name: String) -> void:
 	var btn = parent.find_child(btn_name, true, false)
@@ -60,3 +67,21 @@ func _on_settings_pressed() -> void:
 func _on_credits_pressed() -> void:
 	if credits_url != "":
 		OS.shell_open(credits_url)
+
+func _on_play_pressed() -> void:
+	var buttons = find_child("Buttons", true, false)
+	var menu_vbox = buttons.find_child("MenuVBox", true, false)
+	var level_select_vbox = buttons.find_child("LevelSelectVBox", true, false)
+	
+	if menu_vbox and level_select_vbox:
+		menu_vbox.visible = false
+		level_select_vbox.visible = true
+
+func _on_back_pressed() -> void:
+	var buttons = find_child("Buttons", true, false)
+	var menu_vbox = buttons.find_child("MenuVBox", true, false)
+	var level_select_vbox = buttons.find_child("LevelSelectVBox", true, false)
+	
+	if menu_vbox and level_select_vbox:
+		menu_vbox.visible = true
+		level_select_vbox.visible = false
