@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMapGround.tres" id="1_llr5h"]
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMapSpikes.tres" id="2_gydcd"]
-[ext_resource type="TileSet" uid="uid://3fhx34gftqlm" path="res://Level/Resorses/tileMapBackground.tres" id="3_766vk"]
+[ext_resource type="TileSet" uid="uid://cmmye1mivdp0i" path="res://Level/Resorses/tileMapBackground.tres" id="3_766vk"]
 [ext_resource type="Script" uid="uid://csp22yx0y1w6v" path="res://Level/Sripts/playerController.gd" id="4_0ty4q"]
 [ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Level/Resorses/Player.tres" id="5_5wn4j"]
 [ext_resource type="Texture2D" uid="uid://5u05f64uuq8o" path="res://Level/spriteLists/player.png" id="6_qapvu"]
