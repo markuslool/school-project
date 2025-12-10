@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cb2p523x018lr"]
+
+[ext_resource type="Texture2D" uid="uid://cw5k1ptkro0dt" path="res://Level/spriteLists/tileMap_02.png" id="1_lkqhx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66m4v"]
+texture = ExtResource("1_lkqhx")
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/1 = 1
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_66m4v")

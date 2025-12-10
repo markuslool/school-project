@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ca5plqlu0mwj1"]
 
-[ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Level/Resorses/new_rectangle_shape_2d.tres" id="1_6r25u"]
+[ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Level/Resorses/Player.tres" id="1_6r25u"]
 [ext_resource type="Texture2D" path="res://Resorses/betaTexture.png" id="2_f2bph"]
 
 [node name="Box" type="StaticBody2D"]
