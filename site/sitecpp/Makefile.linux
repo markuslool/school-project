@@ -1,0 +1,37 @@
+# Настройки
+CXX = zig c++
+TARGET_OS = x86_64-linux-musl
+# Используем прямые слеши!
+OUTPUT_DIR = bin/linux
+OUTPUT_BIN = $(OUTPUT_DIR)/my_app
+
+# Флаги компиляции
+CXXFLAGS = -target $(TARGET_OS) \
+           -std=c++17 \
+           -O2 \
+           -I. -I./asio/include \
+           -DASIO_STANDALONE \
+           -D_GNU_SOURCE \
+           -D_LIBCPP_HARDENING_MODE_DEFAULT=0
+
+# Флаги линковки
+LDFLAGS = -target $(TARGET_OS) \
+          -static \
+          -lc++ -lc++abi
+
+SRC = main.cpp
+
+# Правила
+all: clean build
+
+build:
+	@echo "Compiling for Linux (Static Musl)..."
+	# mkdir -p создает папку, если её нет, и не ругается, если есть
+	@mkdir -p $(OUTPUT_DIR)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(OUTPUT_BIN) $(LDFLAGS)
+	@echo "Done! Binary is at: $(OUTPUT_BIN)"
+
+clean:
+	@echo "Cleaning..."
+	# rm -f удаляет файл, если он есть
+	@rm -f $(OUTPUT_BIN)
