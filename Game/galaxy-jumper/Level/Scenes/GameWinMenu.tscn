@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kkhi8hfjkpuj"]
 
-[ext_resource type="Script" uid="uid://c3escbfec78l5" path="res://Level/Sripts/GameOverMenu.gd" id="1_uvubu"]
+[ext_resource type="Script" path="res://Level/Sripts/GameWinMenu.gd" id="1_uvubu"]
 
 [node name="GameOverMenu" type="Control"]
 process_mode = 3
@@ -39,15 +39,15 @@ theme_override_font_sizes/font_size = 48
 text = "Game Win"
 horizontal_alignment = 1
 
-[node name="RestartButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="NextLevelButton" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "Restart Level"
+text = "Next Level"
 
 [node name="MainMenuButton" type="Button" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Main Menu"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
