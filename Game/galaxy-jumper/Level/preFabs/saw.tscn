@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpscnuj6h75rj"]
+
+[ext_resource type="Script" uid="uid://cy0pqsp1p06df" path="res://Level/Sripts/sawMover.gd" id="1_0jtb5"]
+[ext_resource type="Shape2D" uid="uid://bygdw4u3rg5aj" path="res://Level/Resorses/Saw.tres" id="2_0jtb5"]
+[ext_resource type="SpriteFrames" uid="uid://bff7fn762vuh7" path="res://Level/Resorses/Animations/Saw.tres" id="3_kbxsx"]
+
+[node name="Saw" type="CharacterBody2D"]
+z_index = -1
+script = ExtResource("1_0jtb5")
+
+[node name="Saw" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_0jtb5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_kbxsx")
+animation = &"Idle"

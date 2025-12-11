@@ -35,6 +35,8 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		if collider.name == "Spikes":
 			game_over()
+		if collider.name == "Saw":
+			game_over()
 
 func game_over():
 	if game_over_menu:

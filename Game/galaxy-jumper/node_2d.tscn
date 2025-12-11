@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=4 uid="uid://3g4apevwsu31"]
 
-[ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMapGround.tres" id="1_0hol4"]
+[ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_0hol4"]
 [ext_resource type="Shape2D" path="res://Level/Resorses/new_rectangle_shape_2d.tres" id="2_0hol4"]
-[ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMapSpikes.tres" id="2_kdubu"]
+[ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMaps/tileMapSpikes.tres" id="2_kdubu"]
 [ext_resource type="Script" uid="uid://csp22yx0y1w6v" path="res://Level/Sripts/playerController.gd" id="2_q6r6c"]
-[ext_resource type="Texture2D" uid="uid://5u05f64uuq8o" path="res://Level/spriteLists/player.png" id="3_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://6bd1fwo4p00s" path="res://Level/spriteLists/player.png" id="3_q6r6c"]
 [ext_resource type="Script" path="res://camera_2d.gd" id="4_kdubu"]
 
 [node name="Node2D" type="Node2D"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://brhao276wcqp7"]
+
+[ext_resource type="Script" uid="uid://csp22yx0y1w6v" path="res://Level/Sripts/playerController.gd" id="1_ffnj0"]
+[ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Level/Resorses/Player.tres" id="2_44w16"]
+[ext_resource type="Texture2D" uid="uid://6bd1fwo4p00s" path="res://Level/spriteLists/player.png" id="3_pwwca"]
+
+[node name="Player" type="CharacterBody2D"]
+z_index = -2
+script = ExtResource("1_ffnj0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_44w16")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_pwwca")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)

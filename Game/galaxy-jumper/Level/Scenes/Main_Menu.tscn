@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddsdwjtdxq0ac"]
 
 [ext_resource type="Script" uid="uid://d226tm4u4o0wg" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
-[ext_resource type="Script" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
-[ext_resource type="Texture2D" uid="uid://3wb35ly2353h" path="res://Level/spriteLists/1200-1581188533.webp" id="2_1nua6"]
+[ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
+[ext_resource type="Texture2D" uid="uid://c188iwaj2g3tk" path="res://Level/spriteLists/1200-1581188533.webp" id="2_1nua6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i5fg"]
 line_spacing = -8.0
@@ -75,6 +75,8 @@ vertical_alignment = 1
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/Buttons/MenuVBox"]
 custom_minimum_size = Vector2(250, 60)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 stretch_mode = 0
 script = ExtResource("2_1i5fg")
 
@@ -140,6 +142,7 @@ layout_mode = 2
 text = "Back"
 
 [node name="SettingsDialog" type="AcceptDialog" parent="CanvasLayer"]
+oversampling_override = 1.0
 title = "Settings"
 initial_position = 2
 size = Vector2i(200, 100)

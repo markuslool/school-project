@@ -1,0 +1,38 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bff7fn762vuh7"]
+
+[ext_resource type="Texture2D" uid="uid://dici2regq0bi6" path="res://Level/spriteLists/Saw/spriteSaw1.png" id="1_gvwnv"]
+[ext_resource type="Texture2D" uid="uid://ciomy7rpdh3vq" path="res://Level/spriteLists/Saw/spriteSaw2.png" id="2_syqi7"]
+[ext_resource type="Texture2D" uid="uid://cn2nqukvatvea" path="res://Level/spriteLists/Saw/spriteSaw3.png" id="3_txno5"]
+[ext_resource type="Texture2D" uid="uid://dhxig6gm4uojr" path="res://Level/spriteLists/Saw/spriteSaw4.png" id="4_yqwtq"]
+[ext_resource type="Texture2D" uid="uid://bl4vayggwctoe" path="res://Level/spriteLists/Saw/spriteSaw5.png" id="5_55wwr"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gvwnv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gvwnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_syqi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txno5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yqwtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_55wwr")
+}],
+"loop": true,
+"name": &"Work",
+"speed": 12.0
+}]
