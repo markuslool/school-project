@@ -35,7 +35,8 @@ tile_set = ExtResource("3_ru7ib")
 [node name="Platforms" type="Node" parent="Level"]
 
 [node name="Platforms" parent="Level/Platforms" instance=ExtResource("5_gahse")]
-position = Vector2(1367.8667, 761.731)
+position = Vector2(640, 528)
+point_b_offset = Vector2(0, -192)
 
 [node name="Platforms2" parent="Level/Platforms" instance=ExtResource("5_gahse")]
 position = Vector2(1200, 424)
@@ -65,4 +66,4 @@ shape = ExtResource("7_ku7qm")
 texture = ExtResource("8_kj07c")
 
 [node name="Player" parent="." instance=ExtResource("8_gtw4u")]
-position = Vector2(307, 773)
+position = Vector2(208, 336)
