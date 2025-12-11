@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=4 uid="uid://bkyd5emcp2sjg"]
+[gd_scene load_steps=8 format=4 uid="uid://bkyd5emcp2sjg"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_muwwx"]
 [ext_resource type="TileSet" uid="uid://cmmye1mivdp0i" path="res://Level/Resorses/tileMaps/tileMapBackground.tres" id="2_hgcd6"]
 [ext_resource type="TileSet" uid="uid://c2rh6xvxhap2u" path="res://Level/Resorses/tileMaps/tileMapShadow.tres" id="2_kj07c"]
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMaps/tileMapSpikes.tres" id="3_ru7ib"]
-[ext_resource type="Shape2D" uid="uid://vswphl34ehk0" path="res://Level/Resorses/Platform.tres" id="6_ku7qm"]
-[ext_resource type="Script" uid="uid://dmgt1qvkbp4ik" path="res://Level/Sripts/platformMover.gd" id="7_b14qb"]
-[ext_resource type="Texture2D" uid="uid://davprn6865073" path="res://Level/spriteLists/Platform_test.png" id="7_kj07c"]
+[ext_resource type="PackedScene" uid="uid://3kvvvfmhy5ag" path="res://Level/preFabs/platforms.tscn" id="5_gahse"]
 [ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="8_gtw4u"]
 [ext_resource type="PackedScene" uid="uid://bpscnuj6h75rj" path="res://Level/preFabs/saw.tscn" id="8_ku7qm"]
 
@@ -34,59 +32,16 @@ tile_set = ExtResource("3_ru7ib")
 
 [node name="Platforms" type="Node" parent="Level"]
 
-[node name="Platforms" type="CharacterBody2D" parent="Level/Platforms"]
-z_index = -1
-position = Vector2(632, 328)
-script = ExtResource("7_b14qb")
-point_b_offset = Vector2(0, 192)
+[node name="Platforms" parent="Level/Platforms" instance=ExtResource("5_gahse")]
+position = Vector2(1367.8667, 761.731)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platforms/Platforms"]
-position = Vector2(8, 0)
-shape = ExtResource("6_ku7qm")
-
-[node name="TextureRect" type="TextureRect" parent="Level/Platforms/Platforms"]
-offset_left = -24.0
-offset_top = -8.0
-offset_right = 40.0
-offset_bottom = 8.0
-texture = ExtResource("7_kj07c")
-stretch_mode = 1
-
-[node name="Platforms2" type="CharacterBody2D" parent="Level/Platforms"]
-z_index = -1
+[node name="Platforms2" parent="Level/Platforms" instance=ExtResource("5_gahse")]
 position = Vector2(1200, 424)
-script = ExtResource("7_b14qb")
 point_b_offset = Vector2(320, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platforms/Platforms2"]
-position = Vector2(16, 0)
-shape = ExtResource("6_ku7qm")
-
-[node name="TextureRect" type="TextureRect" parent="Level/Platforms/Platforms2"]
-offset_left = -16.0
-offset_top = -8.0
-offset_right = 48.0
-offset_bottom = 8.0
-texture = ExtResource("7_kj07c")
-stretch_mode = 1
-
-[node name="Platforms3" type="CharacterBody2D" parent="Level/Platforms"]
-z_index = -1
+[node name="Platforms3" parent="Level/Platforms" instance=ExtResource("5_gahse")]
 position = Vector2(1684, 393)
-script = ExtResource("7_b14qb")
 point_b_offset = Vector2(0, 500)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Platforms/Platforms3"]
-position = Vector2(12, 0)
-shape = ExtResource("6_ku7qm")
-
-[node name="TextureRect" type="TextureRect" parent="Level/Platforms/Platforms3"]
-offset_left = -20.0
-offset_top = -8.0
-offset_right = 44.0
-offset_bottom = 8.0
-texture = ExtResource("7_kj07c")
-stretch_mode = 1
 
 [node name="Saws" type="Node" parent="Level"]
 
