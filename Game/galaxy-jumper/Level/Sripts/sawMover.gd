@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	if wait_left > 0.0:
 		wait_left = max(wait_left - delta, 0.0)
 		if anim:
-			anim.play("Idle")
+			anim.play("Work")
 		return
 
 	if anim:
