@@ -9,6 +9,7 @@ var game_win_menu_scene = preload("res://Level/Scenes/GameWinMenu.tscn")
 var game_over_menu
 var game_win_menu
 var level_completed: bool = false
+var is_dead: bool = false
 
 func _ready():
 	var canvas_layer = CanvasLayer.new()
@@ -19,6 +20,14 @@ func _ready():
 	canvas_layer.add_child(game_win_menu)
 
 func _physics_process(delta):
+	if is_dead or level_completed:
+		return
+	
+	# Проверка на падение за пределы экрана
+	if global_position.y > 2000:
+		game_over()
+		return
+	
 	# Применяем гравитацию
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -39,14 +48,27 @@ func _physics_process(delta):
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
 			var collider = collision.get_collider()
-			if collider.name == "Spikes":
+			
+			# Проверка на столкновение с шипами (TileMapLayer)
+			if collider is TileMapLayer:
+				if collider.name == "Spikes":
+					game_over()
+					return
+			
+			# Проверка на столкновение с пилой
+			if collider.name == "Saw" or "Saw" in collider.name:
 				game_over()
-			if collider.name == "Saw":
-				game_over()
+				return
+			
+			# Проверка на конец уровня
 			if collider.name == "EndLevel":
 				level_complete()
+				return
 
 func game_over():
+	if is_dead:
+		return
+	is_dead = true
 	if game_over_menu:
 		game_over_menu.show_game_over()
 

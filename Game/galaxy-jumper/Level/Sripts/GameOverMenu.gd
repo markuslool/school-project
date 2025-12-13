@@ -3,6 +3,10 @@ extends Control
 func _ready():
 	visible = false
 
+func show_game_over():
+	visible = true
+	get_tree().paused = true
+
 func show_game_win():
 	visible = true
 	get_tree().paused = true
