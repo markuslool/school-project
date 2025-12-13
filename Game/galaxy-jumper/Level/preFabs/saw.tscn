@@ -5,7 +5,7 @@
 [ext_resource type="SpriteFrames" uid="uid://bff7fn762vuh7" path="res://Level/Resorses/Animations/Saw.tres" id="3_kbxsx"]
 
 [node name="Saw" type="CharacterBody2D"]
-z_index = -1
+z_index = -2
 script = ExtResource("1_0jtb5")
 
 [node name="Saw" type="CollisionShape2D" parent="."]

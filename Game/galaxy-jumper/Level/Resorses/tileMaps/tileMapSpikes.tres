@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwougllk8eu1n" path="res://Level/spriteLists/spriteListSpikes.png" id="1_k664a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5qvf"]
+resource_name = "UncolisionSpikes"
 texture = ExtResource("1_k664a")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0

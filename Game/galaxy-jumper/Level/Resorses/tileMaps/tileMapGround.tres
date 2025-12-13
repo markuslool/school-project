@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://n4ces8tidiyi" path="res://Level/spriteLists/tileMapGroundsPlatforms.png" id="1_ic3xb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_abfgc"]
+resource_name = "Platforms"
 texture = ExtResource("1_ic3xb")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -14,6 +15,7 @@ texture_region_size = Vector2i(32, 32)
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -8.603029, -16, -16, -0.95589066, -16, -0.95589066, -8.603029)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40354"]
+resource_name = "Texture"
 texture = ExtResource("1_h1t17")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0

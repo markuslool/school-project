@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://1oxj1odg6jrx" path="res://Level/spriteLists/SpriteList_01.png" id="1_ldx1y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk4yo"]
+resource_name = "Texture"
 texture = ExtResource("1_ldx1y")
 texture_region_size = Vector2i(32, 32)
 3:2/0 = 0

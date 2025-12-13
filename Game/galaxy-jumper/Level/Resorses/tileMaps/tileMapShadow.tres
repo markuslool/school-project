@@ -1,9 +1,20 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://c2rh6xvxhap2u"]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://c2rh6xvxhap2u"]
 
 [ext_resource type="Texture2D" uid="uid://1oxj1odg6jrx" path="res://Level/spriteLists/SpriteList_01.png" id="1_euu06"]
+[ext_resource type="Texture2D" uid="uid://dwougllk8eu1n" path="res://Level/spriteLists/spriteListSpikes.png" id="1_xnxl5"]
 [ext_resource type="Texture2D" uid="uid://b71jkleuk03x2" path="res://Level/spriteLists/tileMapShadow.png" id="2_pax2p"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fltoe"]
+resource_name = "Spikes"
+texture = ExtResource("1_xnxl5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_40354"]
+resource_name = "Texture"
 texture = ExtResource("1_euu06")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -22,7 +33,40 @@ texture_region_size = Vector2i(32, 32)
 4:2/0 = 0
 3:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xnxl5"]
+resource_name = "CollisionTextbre"
+texture = ExtResource("1_euu06")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, -0.31863022, 16, -0.63726044, -0.31863022, 16, -0.95589256, 16, -16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -0.95589256, -16, -1.2745228)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, 1.5931549, 16, 1.2745247, -1.2745228, -16, -1.2745228)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -1.2745209, -16, -1.2745209, -1.2745228, -16, -1.2745228)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.2745247, -16, 16, -16, 16, -1.2745228, 1.5931549, -1.593153)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -0.63726044, -16, -0.95589066, 16, -16, 16)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.9558945, -16, 16, -16, 16, 16, 0.9558945, 16)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 16, -1.2745209, 16, -1.2745209, 1.2745247, -16, 0.95589066)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 0.95589066, 16, 16, 0.63726425, 16, 0.63726425, 0.95589066)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -16, 16, 16, 16, 16, 1.2745247, -1.2745209, 1.5931549, -0.95589066, -16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, -16, 16, -16, 0.31863022, 16, 0.63726044)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, 16, -16, 0.31863022, 0, 0, 0.31863022, -16)
+3:2/0 = 0
+4:2/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uqlrc"]
+resource_name = "Shadows"
 texture = ExtResource("2_pax2p")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -39,8 +83,46 @@ texture_region_size = Vector2i(32, 32)
 3:2/0 = 0
 4:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwgld"]
+resource_name = "BlackTexture"
+texture = ExtResource("1_euu06")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+3:0/0 = 0
+3:0/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+4:0/0 = 0
+4:0/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+0:1/0 = 0
+0:1/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+1:1/0 = 0
+1:1/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+2:1/0 = 0
+2:1/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+3:1/0 = 0
+3:1/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+4:1/0 = 0
+4:1/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+0:2/0 = 0
+0:2/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+1:2/0 = 0
+1:2/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+2:2/0 = 0
+2:2/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+3:2/0 = 0
+3:2/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+4:2/0 = 0
+4:2/0/modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_40354")
-sources/2 = SubResource("TileSetAtlasSource_uqlrc")
+sources/0 = SubResource("TileSetAtlasSource_fltoe")
+sources/3 = SubResource("TileSetAtlasSource_uqlrc")
+sources/2 = SubResource("TileSetAtlasSource_xnxl5")
+sources/5 = SubResource("TileSetAtlasSource_fwgld")

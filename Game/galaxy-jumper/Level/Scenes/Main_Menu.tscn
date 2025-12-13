@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://ddsdwjtdxq0ac"]
 
 [ext_resource type="Script" uid="uid://d226tm4u4o0wg" path="res://Level/Scenes/levelSwitcher.gd" id="1_1nua6"]
-[ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GitHubButton.gd" id="2_1i5fg"]
+[ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GithubButton.gd" id="2_1i5fg"]
 [ext_resource type="Texture2D" uid="uid://c188iwaj2g3tk" path="res://Level/spriteLists/1200-1581188533.webp" id="2_1nua6"]
-[ext_resource type="Script" path="res://Level/Sripts/SettingsMenu.gd" id="3_settings"]
+[ext_resource type="Script" uid="uid://crbr7yrp06bk" path="res://Level/Sripts/SettingsMenu.gd" id="3_settings"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i5fg"]
 line_spacing = -8.0
@@ -150,16 +150,15 @@ size = Vector2i(400, 250)
 script = ExtResource("3_settings")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SettingsDialog"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 offset_left = 8.0
 offset_top = 8.0
 offset_right = -8.0
 offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 10
 
 [node name="ResolutionContainer" type="HBoxContainer" parent="CanvasLayer/SettingsDialog/VBoxContainer"]
