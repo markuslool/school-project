@@ -81,6 +81,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 stretch_mode = 0
 script = ExtResource("2_1i5fg")
+url = "https://github.com/markuslool/school-project"
 
 [node name="Label" type="Label" parent="CanvasLayer/Buttons/MenuVBox/TextureButton"]
 layout_mode = 1
