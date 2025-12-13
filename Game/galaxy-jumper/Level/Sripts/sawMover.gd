@@ -31,11 +31,8 @@ func _physics_process(delta: float) -> void:
 	if wait_left > 0.0:
 		wait_left = max(wait_left - delta, 0.0)
 		if anim:
-			anim.play("Work")
+			anim.play("default")
 		return
-
-	if anim:
-		anim.play("Work")
 
 	global_position = global_position.move_toward(target, speed * delta)
 
