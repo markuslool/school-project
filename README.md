@@ -37,9 +37,13 @@
 
 🔐 Security Programmer
 
-🧪 Tester
+🧪 Universal Tester
 
 🚀 Відповідальний за деплой проєкту
+
+🎮 Game programmer
+
+♿️ site programmer
 
 
 Никита
