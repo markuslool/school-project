@@ -43,6 +43,18 @@ func _physics_process(delta):
 	# Двигаем тело
 	move_and_slide()
 	
+	# Проверка на раздавливание
+	var crush_detector = $CrushDetector
+	if crush_detector:
+		var bodies = crush_detector.get_overlapping_bodies()
+		for body in bodies:
+			if body == self:
+				continue
+			# Если это платформа (проверяем по имени или скрипту)
+			if "Platform" in body.name:
+				game_over()
+				return
+
 	# Проверка столкновения с шипами и концом уровня
 	if not level_completed:
 		for i in get_slide_collision_count():

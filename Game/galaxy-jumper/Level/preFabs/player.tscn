@@ -18,4 +18,11 @@ texture = ExtResource("3_pwwca")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 
+[node name="CrushDetector" type="Area2D" parent="."]
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrushDetector"]
+shape = ExtResource("2_44w16")
+debug_color = Color(0.996078, 0, 0.188235, 0.419608)
+
 [node name="PauseMenu" parent="." instance=ExtResource("4_pause")]
