@@ -14,7 +14,10 @@ shape = ExtResource("1_vlcod")
 texture = ExtResource("2_mj6b1")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -16.0
-offset_top = -32.0
-offset_right = 16.0
-offset_bottom = -9.0
+offset_left = -50.0
+offset_top = -48.0
+offset_right = 50.0
+offset_bottom = -24.0
+text = "Нажми E для телепорта"
+horizontal_alignment = 1
+vertical_alignment = 1
