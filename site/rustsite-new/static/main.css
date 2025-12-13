@@ -1,0 +1,127 @@
+:root {
+    --bg: #f9fafb;
+    --surface: #fff;
+    --primary: #000000;
+    --primary-hover: #000000;
+    --text: #07070f;
+    --muted: #6c757d;
+    --border: #e5e7eb;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    color: #fff;
+    padding: 32px 0 24px 0;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 12px 0;
+}
+
+nav a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+nav a:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+section p {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+footer {
+    margin-top: 40px;
+    background: var(--surface);
+    color: var(--muted);
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    border-radius: var(--radius) var(--radius) 0 0;
+    font-size: 1rem;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center; /* Центрируем игру */
+    margin: 20px 0;
+    background: #000; /* Черный фон, если пропорции не сойдутся */
+    border-radius: 8px; /* Скругленные углы */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для красоты */
+}
+
+iframe {
+    display: block; /* Убирает лишние отступы снизу */
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 16px;
+    }
+    nav ul {
+        gap: 12px;
+    }
+    header {
+        padding: 20px 0 12px 0;
+    }
+    section h2 {
+        font-size: 1.3rem;
+    }
+}
