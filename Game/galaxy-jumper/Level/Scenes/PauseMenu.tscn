@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://pausemenu123"]
+
+[ext_resource type="Script" path="res://Level/Sripts/PauseMenu.gd" id="1_pause"]
+[ext_resource type="Script" path="res://Level/Sripts/SettingsMenu.gd" id="2_settings"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pause"]
+font_size = 48
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_pause")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_pause")
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Resume"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Exit to Main Menu"
+
+[node name="SettingsDialog" type="AcceptDialog" parent="."]
+title = "Settings"
+initial_position = 2
+size = Vector2i(400, 250)
+script = ExtResource("2_settings")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsDialog"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="ResolutionContainer" type="HBoxContainer" parent="SettingsDialog/VBoxContainer"]
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="SettingsDialog/VBoxContainer/ResolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Resolution:"
+vertical_alignment = 1
+
+[node name="ResolutionOption" type="OptionButton" parent="SettingsDialog/VBoxContainer/ResolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FullscreenContainer" type="HBoxContainer" parent="SettingsDialog/VBoxContainer"]
+layout_mode = 2
+
+[node name="FullscreenLabel" type="Label" parent="SettingsDialog/VBoxContainer/FullscreenContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen:"
+vertical_alignment = 1
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="SettingsDialog/VBoxContainer/FullscreenContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enable Fullscreen"
+
+[node name="FPSContainer" type="HBoxContainer" parent="SettingsDialog/VBoxContainer"]
+layout_mode = 2
+
+[node name="FPSLabel" type="Label" parent="SettingsDialog/VBoxContainer/FPSContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FPS Limit:"
+vertical_alignment = 1
+
+[node name="FPSOption" type="OptionButton" parent="SettingsDialog/VBoxContainer/FPSContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

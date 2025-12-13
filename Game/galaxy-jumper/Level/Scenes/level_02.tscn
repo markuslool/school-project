@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://cmmye1mivdp0i" path="res://Level/Resorses/tileMaps/tileMapBackground.tres" id="3_5riuk"]
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMaps/tileMapSpikes.tres" id="4_gawq2"]
 [ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="5_05ldg"]
-[ext_resource type="PackedScene" path="res://Level/preFabs/teleport.tscn" id="6_5riuk"]
+[ext_resource type="PackedScene" uid="uid://dda8ejve700t6" path="res://Level/preFabs/teleport.tscn" id="6_5riuk"]
 
 [node name="Level_02" type="Node2D"]
 
@@ -36,9 +36,9 @@ position = Vector2(144, 208)
 [node name="teleport" type="Node" parent="."]
 
 [node name="Teleport" parent="." instance=ExtResource("6_5riuk")]
-position = Vector2(327, 224)
+position = Vector2(211, 222)
 target_teleport = NodePath("../Teleport2")
 
 [node name="Teleport2" parent="." instance=ExtResource("6_5riuk")]
-position = Vector2(540, 224)
+position = Vector2(563, 223)
 target_teleport = NodePath("../Teleport")

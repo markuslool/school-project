@@ -7,6 +7,9 @@ extends Control
 @export var credits_url: String = "https://exmaple.com"
 
 func _ready() -> void:
+	# Инициализируем SettingsManager при старте игры
+	_init_settings_manager()
+	
 	# Ищем контейнер с кнопками (исправлено на find_child для Godot 4)
 	var buttons = find_child("Buttons", true, false)
 	if buttons == null:
@@ -85,3 +88,19 @@ func _on_back_pressed() -> void:
 	if menu_vbox and level_select_vbox:
 		menu_vbox.visible = true
 		level_select_vbox.visible = false
+
+func _init_settings_manager() -> void:
+	# Проверяем, есть ли уже SettingsManager
+	var settings_manager = get_node_or_null("/root/SettingsManager")
+	
+	if settings_manager == null:
+		# Создаем SettingsManager и добавляем в корень сцены
+		var script = load("res://Level/Sripts/SettingsManager.gd")
+		settings_manager = script.new()
+		settings_manager.name = "SettingsManager"
+		# Используем call_deferred, так как мы в _ready()
+		get_tree().root.add_child.call_deferred(settings_manager)
+		# Ждем следующий кадр для инициализации
+		await get_tree().process_frame
+		if settings_manager.has_method("_ready"):
+			settings_manager._ready()
