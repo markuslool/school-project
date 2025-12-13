@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dda8ejve700t6"]
+
+[ext_resource type="Script" uid="uid://cmhqjx2kem38m" path="res://Level/Sripts/teleportScript.gd" id="1_mj6b1"]
+[ext_resource type="Shape2D" uid="uid://bjdwqp80p7yst" path="res://Level/Resorses/TeleportRes.tres" id="1_vlcod"]
+[ext_resource type="Texture2D" uid="uid://cogubjdnsufbg" path="res://Level/spriteLists/spriteTeleport.png" id="2_mj6b1"]
+
+[node name="Teleport" type="Area2D"]
+script = ExtResource("1_mj6b1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_vlcod")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mj6b1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+offset_bottom = -9.0

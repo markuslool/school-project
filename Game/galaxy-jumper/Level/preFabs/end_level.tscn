@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm6m2a8207mxs"]
+
+[ext_resource type="Shape2D" uid="uid://bwj4mp8yn4fq3" path="res://Level/Resorses/EndGameRes.tres" id="1_tue41"]
+[ext_resource type="Texture2D" uid="uid://bc6k72me8n0ji" path="res://Level/spriteLists/tileMapNotColl.png" id="2_lhqkd"]
+
+[node name="EndLevel" type="StaticBody2D"]
+
+[node name="EndLevel" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_tue41")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lhqkd")
