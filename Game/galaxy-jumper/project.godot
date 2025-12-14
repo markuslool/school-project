@@ -23,6 +23,10 @@ LeverNumber="*res://Level/Sripts/lever_number.gd"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="GalaxyJumper"
+
 [input]
 
 interact={
