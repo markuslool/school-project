@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://chujx87dp0vla"]
 
-[ext_resource type="Texture2D" uid="uid://d2xhaousbhn3" path="res://Level/spriteLists/spikesfhhfgh.png" id="1_i11c3"]
+[ext_resource type="Texture2D" uid="uid://d2xhaousbhn3" path="res://Level/spriteLists/spikes.png" id="1_i11c3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5qvf"]
 resource_name = "UncolisionSpikes"

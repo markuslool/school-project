@@ -1,10 +1,16 @@
-[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bff7fn762vuh7"]
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://bff7fn762vuh7"]
 
 [ext_resource type="Texture2D" uid="uid://dici2regq0bi6" path="res://Level/spriteLists/Saw/spriteSaw1.png" id="1_gvwnv"]
 [ext_resource type="Texture2D" uid="uid://ciomy7rpdh3vq" path="res://Level/spriteLists/Saw/spriteSaw2.png" id="2_syqi7"]
 [ext_resource type="Texture2D" uid="uid://cn2nqukvatvea" path="res://Level/spriteLists/Saw/spriteSaw3.png" id="3_txno5"]
 [ext_resource type="Texture2D" uid="uid://dhxig6gm4uojr" path="res://Level/spriteLists/Saw/spriteSaw4.png" id="4_yqwtq"]
 [ext_resource type="Texture2D" uid="uid://bl4vayggwctoe" path="res://Level/spriteLists/Saw/spriteSaw5.png" id="5_55wwr"]
+[ext_resource type="Texture2D" uid="uid://cfdxerfiu3wp6" path="res://Level/spriteLists/Saw/spriteSaw6.png" id="6_7cd83"]
+[ext_resource type="Texture2D" uid="uid://cq4pnsva7hyh8" path="res://Level/spriteLists/Saw/spriteSaw7.png" id="7_c0vf1"]
+[ext_resource type="Texture2D" uid="uid://dv0267hgvxsv0" path="res://Level/spriteLists/Saw/spriteSaw8.png" id="8_bubi4"]
+[ext_resource type="Texture2D" uid="uid://bbjbi4osdbe7l" path="res://Level/spriteLists/Saw/spriteSaw9.png" id="9_wk807"]
+[ext_resource type="Texture2D" uid="uid://t7jyde1nsdp5" path="res://Level/spriteLists/Saw/spriteSaw10.png" id="10_wj5gi"]
+[ext_resource type="Texture2D" uid="uid://dxbcvfdopf8m8" path="res://Level/spriteLists/Saw/spriteSaw11.png" id="11_g0jqb"]
 
 [resource]
 animations = [{
@@ -23,6 +29,24 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_55wwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7cd83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c0vf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bubi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wk807")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wj5gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g0jqb")
 }],
 "loop": true,
 "name": &"default",

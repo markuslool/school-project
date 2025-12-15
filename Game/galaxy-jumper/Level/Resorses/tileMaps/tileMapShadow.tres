@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://c2rh6xvxhap2u"]
 
-[ext_resource type="Texture2D" uid="uid://d2xhaousbhn3" path="res://Level/spriteLists/spikesfhhfgh.png" id="1_fwrq8"]
-[ext_resource type="Texture2D" uid="uid://cvgi8cxrvlefb" path="res://Level/spriteLists/pixil-frame-0 (2)thfbfngnu.png" id="2_fwrq8"]
+[ext_resource type="Texture2D" uid="uid://d2xhaousbhn3" path="res://Level/spriteLists/spikes.png" id="1_fwrq8"]
+[ext_resource type="Texture2D" uid="uid://b365qdgl40ecr" path="res://Level/spriteLists/TileMap.png" id="2_fwrq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fltoe"]
 resource_name = "Spikes"

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmgt1qvkbp4ik" path="res://Level/Sripts/platformMover.gd" id="1_t0wxo"]
 [ext_resource type="Shape2D" uid="uid://vswphl34ehk0" path="res://Level/Resorses/Platform.tres" id="2_5b2t5"]
-[ext_resource type="Texture2D" uid="uid://davprn6865073" path="res://Level/spriteLists/Platform_test.png" id="3_ouqkd"]
+[ext_resource type="Texture2D" uid="uid://cr71f0eiq0d1u" path="res://Level/spriteLists/Platform.png" id="3_t0wxo"]
 
 [node name="Platforms" type="CharacterBody2D"]
 z_index = -1
@@ -13,9 +13,9 @@ point_b_offset = Vector2(0, 192)
 shape = ExtResource("2_5b2t5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -32.0
+offset_left = -48.0
 offset_top = -8.0
-offset_right = 32.0
-offset_bottom = 8.0
-texture = ExtResource("3_ouqkd")
+offset_right = 48.0
+offset_bottom = 24.0
+texture = ExtResource("3_t0wxo")
 stretch_mode = 1

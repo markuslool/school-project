@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dda8ejve700t6"]
+
+[ext_resource type="Script" uid="uid://cmhqjx2kem38m" path="res://Level/Sripts/teleportScript.gd" id="1_mj6b1"]
+[ext_resource type="Shape2D" uid="uid://bjdwqp80p7yst" path="res://Level/Resorses/TeleportRes.tres" id="1_vlcod"]
+[ext_resource type="SpriteFrames" uid="uid://dm038cbjb8y12" path="res://Level/Resorses/Animations/TeleportGreen.tres" id="3_mj6b1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mj6b1"]
+font_color = Color(0.62352943, 0.63529414, 0, 1)
+outline_size = 2
+
+[node name="TeleportGreen" type="Area2D"]
+script = ExtResource("1_mj6b1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
+shape = ExtResource("1_vlcod")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 16)
+sprite_frames = ExtResource("3_mj6b1")
+animation = &"Idle"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -50.0
+offset_top = -48.0
+offset_right = 50.0
+offset_bottom = -24.0
+text = "E"
+label_settings = SubResource("LabelSettings_mj6b1")
+horizontal_alignment = 1
+vertical_alignment = 1
