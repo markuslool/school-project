@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=4 uid="uid://dyo1kh8oeeyw1"]
+[gd_scene load_steps=6 format=4 uid="uid://dyo1kh8oeeyw1"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_aq8vd"]
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMaps/tileMapSpikes.tres" id="3_b4b1h"]
 [ext_resource type="TileSet" uid="uid://cmmye1mivdp0i" path="res://Level/Resorses/tileMaps/tileMapBackground.tres" id="3_sa42s"]
+[ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="5_kvoie"]
 [ext_resource type="PackedScene" uid="uid://3kvvvfmhy5ag" path="res://Level/preFabs/platforms.tscn" id="5_ovhnt"]
 
 [node name="Level_last" type="Node2D"]
@@ -20,10 +21,15 @@ tile_set = ExtResource("3_sa42s")
 
 [node name="Spikes" type="TileMapLayer" parent="Level"]
 z_index = -1
-tile_map_data = PackedByteArray("AAANAEgAAAABAAAAAAAOAEgAAAABAAAAAAAPAEgAAAABAAAAAAAQAEgAAAABAAAAAAARAEgAAAABAAAAAAASAEgAAAABAAAAAAATAEgAAAABAAAAAAAUAEgAAAABAAAAAAAVAEgAAAABAAAAAAAWAEgAAAABAAAAAAAXAEgAAAABAAAAAAAYAEgAAAABAAAAAAAZAEgAAAABAAAAAAAaAEgAAAABAAAAAAAbAEgAAAABAAAAAAAcAEgAAAABAAAAAAAdAEgAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAdAEgAAAABAAAAAAAcAEgAAAABAAAAAAAbAEgAAAABAAAAAAAaAEgAAAABAAAAAAAZAEgAAAABAAAAAAAYAEgAAAABAAAAAAAXAEgAAAABAAAAAAAWAEgAAAABAAAAAAAVAEgAAAABAAAAAAAUAEgAAAABAAAAAAATAEgAAAABAAAAAAASAEgAAAABAAAAAAARAEgAAAABAAAAAAAQAEgAAAABAAAAAAAPAEgAAAABAAAAAAAOAEgAAAABAAAAAAANAEgAAAABAAAAAAA=")
 tile_set = ExtResource("3_b4b1h")
 
 [node name="Platforms" parent="Level" instance=ExtResource("5_ovhnt")]
 position = Vector2(688, 424)
 point_b_offset = Vector2(0, 1024)
 speed = 50.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_kvoie")
+autoplay = true
+bus = &"Music"

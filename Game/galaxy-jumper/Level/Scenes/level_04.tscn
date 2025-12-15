@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://d1f2vqwm0ku4t"]
+[gd_scene load_steps=12 format=4 uid="uid://d1f2vqwm0ku4t"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_3rqqu"]
 [ext_resource type="TileSet" uid="uid://c2rh6xvxhap2u" path="res://Level/Resorses/tileMaps/tileMapShadow.tres" id="2_xd1f1"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="8_i4ia6"]
 [ext_resource type="PackedScene" uid="uid://dgjfmejcdq5c" path="res://Level/preFabs/TeleportYellow.tscn" id="8_xd1f1"]
 [ext_resource type="PackedScene" uid="uid://bm6m2a8207mxs" path="res://Level/preFabs/end_level.tscn" id="9_i1q86"]
+[ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="11_hujdh"]
 
 [node name="Level_02" type="Node2D"]
 
@@ -94,3 +95,8 @@ position = Vector2(144, 208)
 
 [node name="EndLevel" parent="." instance=ExtResource("9_i1q86")]
 position = Vector2(1728, 960)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_hujdh")
+autoplay = true
+bus = &"Music"
