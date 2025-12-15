@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://ccjxb0tkttfca"]
+[gd_scene load_steps=11 format=4 uid="uid://ccjxb0tkttfca"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_pdpwf"]
 [ext_resource type="TileSet" uid="uid://c2rh6xvxhap2u" path="res://Level/Resorses/tileMaps/tileMapShadow.tres" id="2_3croa"]
@@ -9,6 +9,7 @@
 [ext_resource type="Shape2D" uid="uid://bwj4mp8yn4fq3" path="res://Level/Resorses/EndGameRes.tres" id="7_e4x6d"]
 [ext_resource type="Texture2D" uid="uid://bc6k72me8n0ji" path="res://Level/spriteLists/tileMapNotColl.png" id="8_dq8yg"]
 [ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="9_gnl1c"]
+[ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="10_3croa"]
 
 [node name="Level_01" type="Node2D"]
 
@@ -84,3 +85,8 @@ texture = ExtResource("8_dq8yg")
 
 [node name="Player" parent="." instance=ExtResource("9_gnl1c")]
 position = Vector2(208, 336)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_3croa")
+autoplay = true
+bus = &"Music"

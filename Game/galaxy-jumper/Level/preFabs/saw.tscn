@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpscnuj6h75rj"]
+[gd_scene load_steps=5 format=3 uid="uid://bpscnuj6h75rj"]
 
 [ext_resource type="Script" uid="uid://cy0pqsp1p06df" path="res://Level/Sripts/sawMover.gd" id="1_0jtb5"]
 [ext_resource type="Shape2D" uid="uid://bygdw4u3rg5aj" path="res://Level/Resorses/Saw.tres" id="2_0jtb5"]
 [ext_resource type="SpriteFrames" uid="uid://bff7fn762vuh7" path="res://Level/Resorses/Animations/Saw.tres" id="3_kbxsx"]
+[ext_resource type="AudioStream" uid="uid://xqe1fccrt526" path="res://Level/Sounds/SawSound.mp3" id="4_kbxsx"]
 
 [node name="Saw" type="CharacterBody2D"]
 z_index = -2
@@ -15,3 +16,9 @@ shape = ExtResource("2_0jtb5")
 scale = Vector2(0.15, 0.15)
 sprite_frames = ExtResource("3_kbxsx")
 frame_progress = 0.031763382
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kbxsx")
+autoplay = true
+max_distance = 250.0
+bus = &"Sounds"

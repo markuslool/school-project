@@ -1,9 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://brhao276wcqp7"]
+[gd_scene load_steps=6 format=3 uid="uid://brhao276wcqp7"]
 
 [ext_resource type="Script" uid="uid://csp22yx0y1w6v" path="res://Level/Sripts/playerController.gd" id="1_ffnj0"]
 [ext_resource type="Shape2D" uid="uid://dx5kbmsis65i0" path="res://Level/Resorses/Player.tres" id="2_44w16"]
-[ext_resource type="Texture2D" uid="uid://6bd1fwo4p00s" path="res://Level/spriteLists/player.png" id="3_pwwca"]
-[ext_resource type="PackedScene" path="res://Level/Scenes/PauseMenu.tscn" id="4_pause"]
+[ext_resource type="SpriteFrames" uid="uid://b0asbec0x8v0g" path="res://Level/Resorses/Animations/Player.tres" id="3_wha1i"]
+[ext_resource type="PackedScene" uid="uid://pausemenu123" path="res://Level/Scenes/PauseMenu.tscn" id="4_pause"]
+[ext_resource type="AudioStream" uid="uid://nj34v6q62v0s" path="res://Level/Sounds/WalkSound.mp3" id="5_qcstq"]
 
 [node name="Player" type="CharacterBody2D"]
 z_index = -2
@@ -12,8 +13,10 @@ script = ExtResource("1_ffnj0")
 [node name="Player" type="CollisionShape2D" parent="."]
 shape = ExtResource("2_44w16")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_pwwca")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_wha1i")
+animation = &"Idle"
+frame_progress = 0.09980304
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
@@ -26,3 +29,8 @@ shape = ExtResource("2_44w16")
 debug_color = Color(0.996078, 0, 0.188235, 0.419608)
 
 [node name="PauseMenu" parent="." instance=ExtResource("4_pause")]
+
+[node name="MoveSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_qcstq")
+max_distance = 100.0
+bus = &"Sounds"

@@ -1,0 +1,68 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://b0asbec0x8v0g"]
+
+[ext_resource type="Texture2D" uid="uid://cwsr16kphk4bb" path="res://Level/spriteLists/player/Walk/Walk1.png" id="1_qjxpi"]
+[ext_resource type="Texture2D" uid="uid://bhuxn14jnxgdq" path="res://Level/spriteLists/player/Walk/Walk2.png" id="2_26r4p"]
+[ext_resource type="Texture2D" uid="uid://dkpqy8s3j6peg" path="res://Level/spriteLists/player/Walk/Walk3.png" id="3_2g8ty"]
+[ext_resource type="Texture2D" uid="uid://btam4ukyn8cx7" path="res://Level/spriteLists/player/Jump/Jump1.png" id="4_i0b08"]
+[ext_resource type="Texture2D" uid="uid://nsx4mtaxbfjq" path="res://Level/spriteLists/player/Jump/Jump2.png" id="5_w3g1u"]
+[ext_resource type="Texture2D" uid="uid://bt1vca5jwdqfn" path="res://Level/spriteLists/player/Jump/Jump3.png" id="6_3aq8m"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_26r4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2g8ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i0b08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w3g1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3aq8m")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qjxpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_26r4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2g8ty")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}]
