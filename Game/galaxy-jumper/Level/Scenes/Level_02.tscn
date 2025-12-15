@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="7_u2tqr"]
 [ext_resource type="Texture2D" uid="uid://20s5t6uwv3o" path="res://Level/spriteLists/portalYellow/sprite_y00.png" id="8_dhvmm"]
 [ext_resource type="PackedScene" uid="uid://dda8ejve700t6" path="res://Level/preFabs/TeleportGreen.tscn" id="8_u2tqr"]
-[ext_resource type="Texture2D" uid="uid://bc6k72me8n0ji" path="res://Level/spriteLists/tileMapNotColl.png" id="9_u2tqr"]
+[ext_resource type="Texture2D" uid="uid://b1kyh0jc7qi4u" path="res://Level/spriteLists/EndLevel/image (2).png" id="9_of6ek"]
 [ext_resource type="PackedScene" uid="uid://bm6m2a8207mxs" path="res://Level/preFabs/end_level.tscn" id="11_sy55t"]
 [ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="12_of6ek"]
 
@@ -17,6 +17,7 @@
 font_size = 14
 
 [node name="Level_training" type="Node2D"]
+position = Vector2(0, 16)
 
 [node name="Level" type="Node" parent="."]
 
@@ -140,8 +141,8 @@ position = Vector2(1168, -1072)
 texture = ExtResource("8_dhvmm")
 
 [node name="SpriteEndLevel" type="Sprite2D" parent="Level/Sprites"]
-position = Vector2(240, 576)
-texture = ExtResource("9_u2tqr")
+position = Vector2(240, 592)
+texture = ExtResource("9_of6ek")
 
 [node name="Player" parent="." instance=ExtResource("7_u2tqr")]
 position = Vector2(240, 336)

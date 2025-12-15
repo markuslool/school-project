@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwgyfgg4h3eeb"
+path="res://.godot/imported/the_elder_scrolls_v_skyrim_03. Jeremy Soule - From Past to Present.mp3-60cc4e15773d03b6f9f3638b2069a88b.mp3str"
+
+[deps]
+
+source_file="res://Level/Sounds/the_elder_scrolls_v_skyrim_03. Jeremy Soule - From Past to Present.mp3"
+dest_files=["res://.godot/imported/the_elder_scrolls_v_skyrim_03. Jeremy Soule - From Past to Present.mp3-60cc4e15773d03b6f9f3638b2069a88b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

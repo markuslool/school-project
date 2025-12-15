@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dinw0aggyrx2n" path="res://Level/Sripts/GithubButton.gd" id="2_1i5fg"]
 [ext_resource type="Texture2D" uid="uid://c188iwaj2g3tk" path="res://Level/spriteLists/Shkibidi_dob_dob_yes_yes.webp" id="2_1nua6"]
 [ext_resource type="Script" uid="uid://crbr7yrp06bk" path="res://Level/Sripts/SettingsMenu.gd" id="3_settings"]
-[ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="5_7d5fj"]
+[ext_resource type="AudioStream" uid="uid://bhq30ojq6e5pd" path="res://Level/Sounds/the_elder_scrolls_v_skyrim_01. Jeremy Soule - Dragonborn.mp3" id="5_7d5fj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1i5fg"]
 line_spacing = -8.0
