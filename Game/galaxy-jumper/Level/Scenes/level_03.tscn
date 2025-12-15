@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://ccjxb0tkttfca"]
+[gd_scene load_steps=10 format=4 uid="uid://ccjxb0tkttfca"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_pdpwf"]
 [ext_resource type="TileSet" uid="uid://c2rh6xvxhap2u" path="res://Level/Resorses/tileMaps/tileMapShadow.tres" id="2_3croa"]
@@ -6,8 +6,7 @@
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMaps/tileMapSpikes.tres" id="4_r0ock"]
 [ext_resource type="PackedScene" uid="uid://3kvvvfmhy5ag" path="res://Level/preFabs/platforms.tscn" id="5_b0mwd"]
 [ext_resource type="PackedScene" uid="uid://bpscnuj6h75rj" path="res://Level/preFabs/saw.tscn" id="6_phm7w"]
-[ext_resource type="Shape2D" uid="uid://bwj4mp8yn4fq3" path="res://Level/Resorses/EndGameRes.tres" id="7_e4x6d"]
-[ext_resource type="Texture2D" uid="uid://bc6k72me8n0ji" path="res://Level/spriteLists/tileMapNotColl.png" id="8_dq8yg"]
+[ext_resource type="PackedScene" uid="uid://bm6m2a8207mxs" path="res://Level/preFabs/end_level.tscn" id="7_pdpwf"]
 [ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="9_gnl1c"]
 [ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="10_3croa"]
 
@@ -74,14 +73,8 @@ point_b_offset = Vector2(0, 288)
 position = Vector2(704, 1000)
 point_b_offset = Vector2(0, -288)
 
-[node name="EndLevel" type="StaticBody2D" parent="Level"]
-position = Vector2(232, 784)
-
-[node name="EndLevel" type="CollisionShape2D" parent="Level/EndLevel"]
-shape = ExtResource("7_e4x6d")
-
-[node name="Sprite2D" type="Sprite2D" parent="Level/EndLevel"]
-texture = ExtResource("8_dq8yg")
+[node name="EndLevel2" parent="Level" instance=ExtResource("7_pdpwf")]
+position = Vector2(240, 816)
 
 [node name="Player" parent="." instance=ExtResource("9_gnl1c")]
 position = Vector2(208, 336)

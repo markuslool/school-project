@@ -94,7 +94,7 @@ target_teleport = NodePath("../TeleportD1")
 position = Vector2(144, 208)
 
 [node name="EndLevel" parent="." instance=ExtResource("9_i1q86")]
-position = Vector2(1728, 960)
+position = Vector2(1744, 1008)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_hujdh")
