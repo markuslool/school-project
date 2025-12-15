@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://crufne52hgchu"]
+[gd_scene load_steps=8 format=4 uid="uid://cp7kwfeoq1k3c"]
 
 [ext_resource type="TileSet" uid="uid://kdgjgut7f0pl" path="res://Level/Resorses/tileMaps/tileMapGround.tres" id="1_aq8vd"]
 [ext_resource type="TileSet" uid="uid://chujx87dp0vla" path="res://Level/Resorses/tileMaps/tileMapSpikes.tres" id="3_b4b1h"]
 [ext_resource type="TileSet" uid="uid://cmmye1mivdp0i" path="res://Level/Resorses/tileMaps/tileMapBackground.tres" id="3_sa42s"]
+[ext_resource type="Script" uid="uid://bjw00q2wk5x32" path="res://Level/Sripts/platformlevel5.gd" id="5_em02o"]
 [ext_resource type="AudioStream" uid="uid://cmbrb8d3i1pjt" path="res://Level/Sounds/LevelTheme.mp3" id="5_kvoie"]
 [ext_resource type="PackedScene" uid="uid://3kvvvfmhy5ag" path="res://Level/preFabs/platforms.tscn" id="5_ovhnt"]
+[ext_resource type="PackedScene" uid="uid://brhao276wcqp7" path="res://Level/preFabs/player.tscn" id="7_j2653"]
 
 [node name="Level_last" type="Node2D"]
 
@@ -26,10 +28,21 @@ tile_set = ExtResource("3_b4b1h")
 
 [node name="Platforms" parent="Level" instance=ExtResource("5_ovhnt")]
 position = Vector2(688, 424)
-point_b_offset = Vector2(0, 1024)
-speed = 50.0
+script = ExtResource("5_em02o")
+point_b_offset = Vector2(0, 100)
+activation_action = "interact"
+activation_key_label = "E"
+detection_radius = 64.0
+infinite_drop = true
+snap_delay = 2.0
+snap_multiplier = 3.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_kvoie")
 autoplay = true
 bus = &"Music"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("7_j2653")]
+position = Vector2(561, 370)

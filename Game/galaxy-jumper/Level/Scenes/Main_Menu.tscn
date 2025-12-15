@@ -213,6 +213,58 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
+[node name="AudioContainer" type="VBoxContainer" parent="CanvasLayer/SettingsDialog/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MasterContainer" type="HBoxContainer" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer"]
+layout_mode = 2
+
+[node name="MasterLabel" type="Label" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer/MasterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Master Volume:"
+vertical_alignment = 1
+
+[node name="MasterSlider" type="HSlider" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer/MasterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+
+[node name="MusicContainer" type="HBoxContainer" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer/MusicContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music Volume:"
+vertical_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer/MusicContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+
+[node name="SoundsContainer" type="HBoxContainer" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer"]
+layout_mode = 2
+
+[node name="SoundsLabel" type="Label" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer/SoundsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX Volume:"
+vertical_alignment = 1
+
+[node name="SoundsSlider" type="HSlider" parent="CanvasLayer/SettingsDialog/VBoxContainer/AudioContainer/SoundsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_7d5fj")
 autoplay = true

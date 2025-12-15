@@ -39,10 +39,6 @@ func _physics_process(delta):
 	if is_dead or level_completed:
 		return
 	
-	# Проверка на падение за пределы экрана
-	if global_position.y > 2000:
-		game_over()
-		return
 	
 	# Применяем гравитацию
 	if not is_on_floor():

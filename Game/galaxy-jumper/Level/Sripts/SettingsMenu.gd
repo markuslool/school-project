@@ -3,6 +3,9 @@ extends AcceptDialog
 @onready var resolution_option: OptionButton = $VBoxContainer/ResolutionContainer/ResolutionOption
 @onready var fullscreen_checkbox: CheckBox = $VBoxContainer/FullscreenContainer/FullscreenCheckBox
 @onready var fps_option: OptionButton = $VBoxContainer/FPSContainer/FPSOption
+@onready var master_slider: HSlider = get_node_or_null("VBoxContainer/AudioContainer/MasterContainer/MasterSlider")
+@onready var music_slider: HSlider = get_node_or_null("VBoxContainer/AudioContainer/MusicContainer/MusicSlider")
+@onready var sounds_slider: HSlider = get_node_or_null("VBoxContainer/AudioContainer/SoundsContainer/SoundsSlider")
 
 var settings_manager: Node = null
 
@@ -64,6 +67,31 @@ func _setup_ui():
 		if not fps_option.item_selected.is_connected(_on_fps_selected):
 			fps_option.item_selected.connect(_on_fps_selected)
 
+	# Настраиваем аудио слайдеры, если есть
+	if master_slider and settings_manager:
+		master_slider.min_value = 0
+		master_slider.max_value = 100
+		master_slider.step = 1
+		master_slider.value = settings_manager.get_master_volume()
+		if not master_slider.value_changed.is_connected(_on_master_changed):
+			master_slider.value_changed.connect(_on_master_changed)
+
+	if music_slider and settings_manager:
+		music_slider.min_value = 0
+		music_slider.max_value = 100
+		music_slider.step = 1
+		music_slider.value = settings_manager.get_music_volume()
+		if not music_slider.value_changed.is_connected(_on_music_changed):
+			music_slider.value_changed.connect(_on_music_changed)
+
+	if sounds_slider and settings_manager:
+		sounds_slider.min_value = 0
+		sounds_slider.max_value = 100
+		sounds_slider.step = 1
+		sounds_slider.value = settings_manager.get_sounds_volume()
+		if not sounds_slider.value_changed.is_connected(_on_sounds_changed):
+			sounds_slider.value_changed.connect(_on_sounds_changed)
+
 func _on_resolution_selected(index: int):
 	if settings_manager:
 		settings_manager.set_resolution(index)
@@ -75,3 +103,15 @@ func _on_fullscreen_toggled(button_pressed: bool):
 func _on_fps_selected(index: int):
 	if settings_manager:
 		settings_manager.set_fps(index)
+
+func _on_master_changed(value: float):
+	if settings_manager:
+		settings_manager.set_master_volume(int(value))
+
+func _on_music_changed(value: float):
+	if settings_manager:
+		settings_manager.set_music_volume(int(value))
+
+func _on_sounds_changed(value: float):
+	if settings_manager:
+		settings_manager.set_sounds_volume(int(value))
