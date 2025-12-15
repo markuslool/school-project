@@ -1,19 +1,19 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://chujx87dp0vla"]
 
-[ext_resource type="Texture2D" uid="uid://dwougllk8eu1n" path="res://Level/spriteLists/spriteListSpikes.png" id="1_k664a"]
+[ext_resource type="Texture2D" uid="uid://d2xhaousbhn3" path="res://Level/spriteLists/spikesfhhfgh.png" id="1_i11c3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5qvf"]
 resource_name = "UncolisionSpikes"
-texture = ExtResource("1_k664a")
+texture = ExtResource("1_i11c3")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, -16, -0.31863022)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 16, 16, 0.31863022, 16, 0.31863022, -16)
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.31863022, -16, 16, 16, -16, 16)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -1.593153, 16, 16, -16, 16, -16, -1.593153)
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -16, -16, 0, 16)
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -16, -16, -16, 1.5931549, 16, 0.95589066)
 1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, 0.31863022, -16, 16)
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -0.31863022, -16, 0, 16, -16, 16)
 
 [resource]
 tile_size = Vector2i(32, 32)

@@ -1,13 +1,41 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cmmye1mivdp0i"]
 
-[ext_resource type="Texture2D" uid="uid://1oxj1odg6jrx" path="res://Level/spriteLists/SpriteList_01.png" id="1_ldx1y"]
+[ext_resource type="Texture2D" uid="uid://cvgi8cxrvlefb" path="res://Level/spriteLists/pixil-frame-0 (2)thfbfngnu.png" id="1_kaspx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sk4yo"]
 resource_name = "Texture"
-texture = ExtResource("1_ldx1y")
+texture = ExtResource("1_kaspx")
 texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+1:0/0 = 0
+1:0/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+2:0/0 = 0
+2:0/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+3:0/0 = 0
+3:0/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+4:0/0 = 0
+4:0/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+0:1/0 = 0
+0:1/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+1:1/0 = 0
+1:1/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+2:1/0 = 0
+2:1/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+3:1/0 = 0
+3:1/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+4:1/0 = 0
+4:1/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+0:2/0 = 0
+0:2/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+1:2/0 = 0
+1:2/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
+2:2/0 = 0
+2:2/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
 3:2/0 = 0
+3:2/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
 4:2/0 = 0
+4:2/0/modulate = Color(0.3328807, 0.33288068, 0.33288068, 1)
 
 [resource]
 tile_size = Vector2i(32, 32)

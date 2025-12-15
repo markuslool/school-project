@@ -52,6 +52,17 @@ Markus
 Nekster"
 label_settings = SubResource("LabelSettings_sy55t")
 
+[node name="Label4" type="Label" parent="Level/Labes"]
+offset_left = 1101.0
+offset_top = -296.0
+offset_right = 1239.0
+offset_bottom = -207.0
+text = "Dude, 
+your LOZER"
+label_settings = SubResource("LabelSettings_sy55t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="TileMap" type="Node" parent="Level"]
 
 [node name="Ground" type="TileMapLayer" parent="Level/TileMap"]
@@ -97,17 +108,14 @@ point_b_offset = Vector2(0, 196)
 [node name="Saw2" parent="Level/Saws" instance=ExtResource("5_6wiap")]
 position = Vector2(384, 856)
 point_b_offset = Vector2(0, 196)
-animation_node_path = NodePath("../Saw/AnimatedSprite2D")
 
 [node name="Saw3" parent="Level/Saws" instance=ExtResource("5_6wiap")]
 position = Vector2(448, 1032)
 point_b_offset = Vector2(0, -196)
-animation_node_path = NodePath("../Saw/AnimatedSprite2D")
 
 [node name="Saw4" parent="Level/Saws" instance=ExtResource("5_6wiap")]
 position = Vector2(504, 856)
 point_b_offset = Vector2(0, 196)
-animation_node_path = NodePath("../Saw/AnimatedSprite2D")
 
 [node name="Saw5" parent="Level/Saws" instance=ExtResource("5_6wiap")]
 position = Vector2(672, 912)
@@ -118,11 +126,9 @@ speed = 1000.0
 
 [node name="TeleportA1" parent="Level/Teleports" instance=ExtResource("8_u2tqr")]
 position = Vector2(752, 384)
-target_teleport = NodePath("../../Sprites/SpriteTeleport")
 
 [node name="TeleportA2" parent="Level/Teleports" instance=ExtResource("8_u2tqr")]
 position = Vector2(1696, -416)
-target_teleport = NodePath("../../Sprites/SpriteTeleport2")
 
 [node name="Sprites" type="Node" parent="Level"]
 
